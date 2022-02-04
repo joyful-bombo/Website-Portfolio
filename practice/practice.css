@@ -1,0 +1,30 @@
+:root {
+  --background-color: thistle;
+  --font-size: 32px;
+  --base-space: 8px;
+  --text-color: whitesmoke;
+}
+
+.first-list {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin-left: var(--base-space);
+}
+
+.first-list li {
+  font-size: var(--font-size);
+}
+
+.second-list {
+  background-color: var(--background-color);
+  color: whitesmoke;
+  margin-left: cal(var(--base-space) * 2);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --background-color: salmon;
+    --text-color: blue;
+    --base-color: 4px;
+  }
+}

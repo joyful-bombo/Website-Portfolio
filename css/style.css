@@ -1,0 +1,8 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  background: url("../images/nav_header.png");
+  height: 800px;
+}
