@@ -42,6 +42,13 @@ a {
   color: cornflowerblue;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -86,7 +93,9 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 .navbar__logo a {
+  font-size: 18px;
   color: var(--color-black);
+  vertical-align: middle;
 }
 
 .navbar__menu {
@@ -107,5 +116,36 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-grey);
-  
+}
+
+/* Home */
+#home {
+  background: url(../images/Yellow\ and\ Black\ YouTube\ Channel\ Art.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__profile {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: var(--size-border-radius);
 }
