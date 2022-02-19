@@ -392,8 +392,8 @@ p {
 }
 
 .testimonial__image {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
@@ -412,10 +412,12 @@ p {
 }
 
 .testimonial__speech p {
+  font-size: var(--font-medium);
   color: var(--color-light-grey);
 }
 
 .testimonial__speech a {
+  font-size: var(--font-regular);
   color: var(--color-dark-pink);
 }
 
