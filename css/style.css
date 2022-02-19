@@ -490,5 +490,10 @@ p {
   .project {
     flex-grow: 1;
   }
+
+  .testimonial__image {
+    width: 80px;
+    height: 80px;
+  }
 }
 
