@@ -152,6 +152,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding: 40px;
   text-align: center;
 }
@@ -472,6 +473,18 @@ p {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 30px;
+  }
+
+  .major__description {
+    margin-bottom: 20px;
   }
 }
 
