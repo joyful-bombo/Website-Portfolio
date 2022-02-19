@@ -486,5 +486,9 @@ p {
   .major__description {
     margin-bottom: 20px;
   }
+
+  .project {
+    flex-grow: 1;
+  }
 }
 
