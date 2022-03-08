@@ -13,7 +13,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
     rel="stylesheet" />
+    <!-- 스타일시트 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <!-- 구글 아이콘 사용 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
   <link rel="stylesheet" href="./css/style.css" />
   <script defer src="./js/main.js"></script>
 </head>
@@ -189,36 +192,36 @@
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
-        <button class="category__btn active">All<span class="category__count">1</span></button>
-        <button class="category__btn">Front-end<span class="category__count">1</span></button>
-        <button class="category__btn">Back-end<span class="category__count">1</span></button>
-        <button class="category__btn">Mobile<span class="category__count">1</span></button>
-        <button class="category__btn">Data-engineering<span class="category__count">1</span></button>
+        <button class="category__btn active" data-filter="*">All<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="mobile">Mobile<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="data-engineering">Data-engineering<span class="category__count">1</span></button>
       </div>
 
       <div class="work__projects">
-        <a href="javascript:void(0)" class="project" target="_blank">
+        <a href="javascript:void(0)" class="project" target="_blank" data-type = "front-end">
           <img src="" alt="image" class="project__image/">
           <div class="project__description">
             <h3>Title</h3>
             <span>description</span>
           </div>
         </a>
-        <a href="javascript:void(0)" class="project" target="_blank">
+        <a href="javascript:void(0)" class="project" target="_blank" data-type = "back-end">
           <img src="" alt="image" class="project__image" />
           <div class="project__description">
             <h3>Title</h3>
             <span>description</span>
           </div>
         </a>
-        <a href="javascript:void(0)" class="project" target="_blank">
+        <a href="javascript:void(0)" class="project" target="_blank" data-type = "mobile">
           <img src="" alt="image" class="project__image" />
           <div class="project__description">
             <h3>Title</h3>
             <span>description</span>
           </div>
         </a>
-        <a href="javascript:void(0)" class="project" target="_blank">
+        <a href="javascript:void(0)" class="project" target="_blank" data-type = "data-engineering">
           <img src="" alt="image" class="project__image" />
           <div class="project__description">
             <h3>Title</h3>
@@ -259,6 +262,11 @@
     </div>
     <p class="contact__rights">&copy; All rights reserved</p>
   </section>
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
 </body>
 
 </html>

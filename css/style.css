@@ -468,6 +468,31 @@ p {
   transition: all var(--animation-duration);
 }
 
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+#to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* below 768px screen width responsive nav */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {

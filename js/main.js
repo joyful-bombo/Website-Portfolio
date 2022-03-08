@@ -4,15 +4,6 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-// navbar__menu btn
-const navbarMenu = document.querySelector('.navbar__menu');
-
-// home
-const home = document.querySelector('#home');
-const homeHeight = home.getBoundingClientRect().height;
-// home__contact btn
-const contactBtn = document.querySelector('.home__contact');
-
 // navbar is transparent on scroll top else blue
 document.addEventListener('scroll' , (e) => {
   if (window.scrollY > navbarHeight){
@@ -24,6 +15,9 @@ document.addEventListener('scroll' , (e) => {
 
 });
 
+// navbar__menu btn
+const navbarMenu = document.querySelector('.navbar__menu');
+
 // navbar click menu to scroll Update
 navbarMenu.addEventListener('click', (e) => {
   console.log(e.target.dataset.link);
@@ -33,11 +27,18 @@ navbarMenu.addEventListener('click', (e) => {
   scrollIntoViews(link);
 });
 
+// home__contact btn
+const contactBtn = document.querySelector('.home__contact');
+
 // contact button scroll to contact section
 contactBtn.addEventListener('click', () => {
   const contact = document.querySelector('#contact');
   scrollIntoViews(contact);
 });
+
+// home
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
 
 // scroll fade out home section
 
@@ -54,4 +55,18 @@ function scrollIntoViews(selector) {
 }
 
 
+// scroll Visible to-top button
+const scrollTop = document.querySelector('#to-top');
 
+document.addEventListener('scroll', () => {
+  if(window.scrollY > 50){
+    scrollTop.classList.add('visible')
+  }
+  else {
+    scrollTop.classList.remove('visible')
+  }
+});
+
+scrollTop.addEventListener('click' , () => {
+  window.scrollTo(0, 0);
+});
