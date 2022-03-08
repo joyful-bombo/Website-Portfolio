@@ -11,6 +11,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-aquablue: #B6CDDE;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   /* Font size */
@@ -99,12 +100,20 @@ p {
 /* Navbar */
 
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.sticky {
+  width: 100%;
+  background-color: var(--color-aquablue);
 }
 
 .navbar__logo {
@@ -154,6 +163,7 @@ p {
   background-size: cover;
   background-attachment: fixed;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 
