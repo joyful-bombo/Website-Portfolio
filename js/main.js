@@ -31,8 +31,7 @@ const contactBtn = document.querySelector('.home__contact');
 
 // contact button scroll to contact section
 contactBtn.addEventListener('click', () => {
-  const contact = document.querySelector('#contact');
-  scrollIntoViews(contact);
+  scrollIntoViews('#contact');
 });
 
 // home
@@ -57,7 +56,7 @@ document.addEventListener('scroll', () => {
 });
 
 scrollTop.addEventListener('click', () => {
-  window.scrollTo(0, 0);
+  scrollIntoViews('#home');
 });
 
 // Project
