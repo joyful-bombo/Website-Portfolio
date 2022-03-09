@@ -17,12 +17,18 @@ document.addEventListener('scroll', (e) => {
 // navbar__menu btn
 const navbarMenu = document.querySelector('.navbar__menu');
 
+// navbar toggle button for small display
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+})
+
 // navbar click menu to scroll Update
 navbarMenu.addEventListener('click', (e) => {
-  console.log(e.target.dataset.link);
   const target = e.target;
   const link = target.dataset.link;
 
+  navbarMenu.classList.remove('open');
   scrollIntoViews(link);
 });
 
