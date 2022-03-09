@@ -5,11 +5,10 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 // navbar is transparent on scroll top else blue
-document.addEventListener('scroll' , (e) => {
-  if (window.scrollY > navbarHeight){
+document.addEventListener('scroll', (e) => {
+  if (window.scrollY > navbarHeight) {
     navbar.classList.add('sticky');
-  }
-  else {
+  } else {
     navbar.classList.remove('sticky');
   }
 
@@ -46,27 +45,50 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 })
 
-// click btn scrollInto Function
-function scrollIntoViews(selector) {
-  const btnScroll = document.querySelector(selector);
-  btnScroll.scrollIntoView({
-    behavior : "smooth"
-  });
-}
-
-
 // scroll Visible to-top button
 const scrollTop = document.querySelector('#to-top');
 
 document.addEventListener('scroll', () => {
-  if(window.scrollY > 50){
+  if (window.scrollY > 50) {
     scrollTop.classList.add('visible')
-  }
-  else {
+  } else {
     scrollTop.classList.remove('visible')
   }
 });
 
-scrollTop.addEventListener('click' , () => {
+scrollTop.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
+
+// Project
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  projectContainer.classList.add('anim-out');
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300)
+});
+
+// click btn scrollInto Function
+function scrollIntoViews(selector) {
+  const btnScroll = document.querySelector(selector);
+  btnScroll.scrollIntoView({
+    behavior: "smooth"
+  });
+}
